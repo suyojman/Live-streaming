@@ -6,7 +6,7 @@ import ntpath
 class VideoStreaming():
     def __init__(self,path):
         self.path = path
-        self.output_path = "/home/yipl/Workspace/freelance/live-streaming/media/"
+        self.output_path = "<path_of_the_folder>/Live-streaming/media/"
 
     def create_dir(self,directory_name):
         parent_dir = self.output_path
@@ -36,14 +36,6 @@ class VideoStreaming():
 
 
 
-video_path = input("Enter yoiur video path !!!")
+video_path = input("Enter your video path !!!")
 instance = VideoStreaming(video_path)
 instance.convert_to_hls()
-
-
-# video = ffmpeg_streaming.input(video_path)
-# print("Converting")
-# hls = video.hls(Formats.h264())
-# hls.auto_generate_representations()
-# hls.output('/home/yipl/Workspace/freelance/live-streaming/media/suyoj2.m3u8')
-# print('Done!!')
